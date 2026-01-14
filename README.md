@@ -1,6 +1,5 @@
-# Trend Application - DevOps CI/CD Project
-
-## Project Overview
+Trend Application - DevOps CI/CD Project 3
+ Project Overview
 Full-stack React application deployed on  EKS using Jenkins 
 
 
