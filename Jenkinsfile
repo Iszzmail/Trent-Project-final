@@ -18,7 +18,7 @@ pipeline {
             }
         }
         
-        stage('Push to ECR') {
+        stage('1') {
             steps {
                 script {
                     sh "aws ecr get-login-password --region ${AWS_REGION} | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
@@ -28,7 +28,7 @@ pipeline {
             }
         }
         
-        stage('Deploy to EKS') {
+        stage('2') {
             steps {
                 script {
                     sh "aws eks update-kubeconfig --name ${EKS_CLUSTER} --region ${AWS_REGION}"
